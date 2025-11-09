@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://be3qa0po0of1c"]
+
+[ext_resource type="Texture2D" uid="uid://cv8eyybk8csl" path="res://sprites/spritesheet.png" id="1_fobxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(6, 12)
+
+[node name="Zombie" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="RightSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_fobxw")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="ForwardSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_fobxw")
+region_enabled = true
+region_rect = Rect2(16, 16, 16, 16)

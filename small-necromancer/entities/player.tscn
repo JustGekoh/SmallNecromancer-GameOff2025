@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bimi32xiglth"]
+
+[ext_resource type="Script" uid="uid://cfnof4tbhh2fc" path="res://entities/player.gd" id="1_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://cv8eyybk8csl" path="res://sprites/spritesheet.png" id="1_merdl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(6, 12)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_b0kkn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="RightSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_merdl")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
+
+[node name="ForwardSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_merdl")
+region_enabled = true
+region_rect = Rect2(16, 32, 16, 16)

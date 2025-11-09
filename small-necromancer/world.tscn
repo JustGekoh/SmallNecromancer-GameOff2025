@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7v287ommabiq"]
+
+[ext_resource type="PackedScene" uid="uid://bimi32xiglth" path="res://entities/player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://2aub43npg2pb" path="res://entities/civilian.tscn" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://bpyqkv3a6lojb" path="res://entities/civilian.gd" id="3_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://be3qa0po0of1c" path="res://entities/zombie.tscn" id="4_036b0"]
+[ext_resource type="Script" uid="uid://7ipfkgcfh70p" path="res://entities/zombie.gd" id="5_dwbse"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(33, 80)
+
+[node name="Civilian" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(172, 71)
+script = ExtResource("3_aqk2v")
+
+[node name="Zombie" parent="." instance=ExtResource("4_036b0")]
+script = ExtResource("5_dwbse")
